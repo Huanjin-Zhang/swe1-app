@@ -1,5 +1,5 @@
 # swe1-app
-<a href="https://travis-ci.com/Huanjin-Zhang/swe1-a[[">
+<a href="https://travis-ci.com/Huanjin-Zhang/swe1-app">
     <img 
          alt="Build Status" 
          src="https://travis-ci.com/Huanjin-Zhang/swe1-app.svg?branch=main">
