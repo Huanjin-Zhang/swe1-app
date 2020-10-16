@@ -1,11 +1,19 @@
 language: python
-
 # command to install dependencies
 python:
-  - "3.8"
+  - 3.6
 
 install:
   - pip install -r requirements.txt
 
+before_script:
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
+
 script:
-  - python -m pytest ./polls/test.py
+  - black --check .
+  - flake8 .
+  - coverage run --source=polls manage.py test
+
+after_script:
+  - coveralls
